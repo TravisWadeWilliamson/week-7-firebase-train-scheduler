@@ -1,0 +1,52 @@
+body, html {
+    margin: 0 auto;
+  height: 100%;
+}
+
+#bcg-img {
+  /* The image used */
+  background-image: url("images/maxresdefault.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  background-image: url("images/south-korean-flag-waving-gif-animation-8-big.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+.mb-4 {
+  background-color: rgba(241, 245, 247, 0.86); color: black;
+  font-weight: 500;
+}
+.card-header {
+  background-color: rgba(83, 184, 224, 0.678); color: black;
+  font-weight: 500;
+}
+
+#datetime {
+  float: right;
+  margin-bottom: 0;
+  padding: 0 .5rem;
+}
+
+
+#hyperlink {
+  float: right;
+  margin-bottom: 0;
+  padding: 0 .5rem;
+}
+
+#employee-table th, td {
+  display: inline-block;
+  width: 16.575%;
+}
+
+.button {
+  
+}
