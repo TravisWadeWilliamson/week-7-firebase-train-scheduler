@@ -1,6 +1,5 @@
 body, html {
     margin: 0 auto;
- 
 }
 
 #bcg-img {
@@ -34,7 +33,7 @@ body, html {
   float: right;
   margin-bottom: 0;
   padding: 0 .5rem;
-  width: 25%;
+  width: 20%;
 }
 
 
@@ -46,6 +45,6 @@ body, html {
 
 #train-table th, td {
   display: inline-block;
-  width: 16.575%;
+  width: 20%;
 }
 

@@ -25,6 +25,16 @@ setInterval(() => {
   dateTime.text(convertedDateTime);
  }, 1000);
 
+// const dateTime = $('#datetime');
+
+// setInterval(() => {
+//   const now = moment();
+//   const newMoment = moment.add(17, 'h');
+//   const convertedDateTime = now.format("DD  MMM  HH:mm:ss");
+//   const koreaTime = convertedDateTime.add(17, 'hours');
+//   dateTime.text(koreaTime);
+//  }, 1000);
+
 
 // Initialize Firebase
 var config = {
