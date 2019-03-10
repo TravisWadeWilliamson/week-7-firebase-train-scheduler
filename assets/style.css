@@ -1,6 +1,6 @@
 body, html {
     margin: 0 auto;
-  height: 100%;
+ 
 }
 
 #bcg-img {
@@ -14,11 +14,12 @@ body, html {
   background-size: cover;
 }
 .jumbotron {
-  background-image: url("images/south-korean-flag-waving-gif-animation-8-big.gif");
+  background-image: url("images/korean-flag.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
+  height: auto;
 }
 .mb-4 {
   background-color: rgba(241, 245, 247, 0.86); color: black;
@@ -33,6 +34,7 @@ body, html {
   float: right;
   margin-bottom: 0;
   padding: 0 .5rem;
+  width: 25%;
 }
 
 
@@ -42,11 +44,8 @@ body, html {
   padding: 0 .5rem;
 }
 
-#employee-table th, td {
+#train-table th, td {
   display: inline-block;
   width: 16.575%;
 }
 
-.button {
-  
-}
