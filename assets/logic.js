@@ -24,7 +24,7 @@ moment.tz.add("Asia/Seoul|LMT KST JST KST KDT KDT|-8r.Q -8u -90 -90 -9u -a0|0123
 
 // function to render clock
 setInterval(() => {
-  //formatting koreaTime
+  // Adding timezone KST to moment and formatting
   const kst = moment().tz('Asia/Seoul').format("DD  MMM  HH:mm:ss");
   dateTime.text(`KST: ${kst}`);
 }, 1000);
@@ -44,34 +44,34 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-// 2. Button for adding Employees
-$("#add-employee-btn").on("click", function (event) {
+// 2. Button for adding buses
+$("#add-bus-btn").on("click", function (event) {
   event.preventDefault();
 
   // Grabs user input
-  var empName = $("#employee-name-input").val().trim();
-  var empRole = $("#role-input").val().trim();
-  var empStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
-  var empRate = $("#rate-input").val().trim();
-
-  // Creates local "temporary" object for holding employee data
-  var newEmp = {
-    name: empName,
-    role: empRole,
-    start: empStart,
-    rate: empRate
+  var  busNum= $("#bus-number-input").val().trim();
+  var destination = $("#destination-input").val().trim();
+  var firstBus = moment($("#first-bus-input").val().trim(), "HH:mm").format("X");
+  var frequency = $("#frequency-input").val().trim();
+  
+  // Creates local "temporary" object for holding bus info
+  var newBus = {
+    bus: busNum,
+    dest: destination,
+    start: firstBus,
+    rate: frequency
   };
 
   // Uploads employee data to the database
-  database.ref().push(newEmp);
+  database.ref().push(newBus);
 
   // Logs everything to console
-  console.log(newEmp.name);
-  console.log(newEmp.role);
-  console.log(newEmp.start);
-  console.log(newEmp.rate);
+  console.log(newBus.bus);
+  console.log(newBus.destination);
+  console.log(newBus.firstBus);
+  console.log(newBus.frequency);
 
-  alert("Employee successfully added");
+  alert("Bus successfully added");
 
   // Clears all of the text-boxes
   $("#employee-name-input").val("");
