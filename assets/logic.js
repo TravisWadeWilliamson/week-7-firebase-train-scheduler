@@ -7,33 +7,28 @@
     * Destination 
     
     * First Train Time -- in military time
-    
+
     * Frequency -- in minutes
   
   * Code this app to calculate when the next train will arrive; this should be relative to the current time.
   
   * Users from many different machines must be able to view same train times.
   
- */
+//  */ 
 
-
+//create a function to dynamically display local KST
 const dateTime = $('#datetime');
 
+// add the Asia/Seoul timezone to the moment
+moment.tz.add("Asia/Seoul|LMT KST JST KST KDT KDT|-8r.Q -8u -90 -90 -9u -a0|0123141414141414135353|-2um8r.Q 97XV.Q 1m1zu kKo0 2I0u OL0 1FB0 Rb0 1qN0 TX0 1tB0 TX0 1tB0 TX0 1tB0 TX0 2ap0 12FBu 11A0 1o00 11A0|23e6")
+
+// function to render clock
 setInterval(() => {
-  const now = moment();
-  const convertedDateTime = now.format("DD  MMM  HH:mm:ss");
-  dateTime.text(convertedDateTime);
- }, 1000);
+  //formatting koreaTime
+  const kst = moment().tz('Asia/Seoul').format("DD  MMM  HH:mm:ss");
+  dateTime.text(`KST: ${kst}`);
+}, 1000);
 
-// const dateTime = $('#datetime');
-
-// setInterval(() => {
-//   const now = moment();
-//   const newMoment = moment.add(17, 'h');
-//   const convertedDateTime = now.format("DD  MMM  HH:mm:ss");
-//   const koreaTime = convertedDateTime.add(17, 'hours');
-//   dateTime.text(koreaTime);
-//  }, 1000);
 
 
 // Initialize Firebase
