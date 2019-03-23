@@ -42,8 +42,3 @@ body, html {
   padding: 0 .5rem;
 }
 
-#train-table th, td {
-  display: inline-block;
-  width: 20%;
-}
-
